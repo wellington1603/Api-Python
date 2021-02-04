@@ -22,9 +22,15 @@ def home():
             elif(request.form["opc"] == "mult"):
                 mult = int(num1) * int(num2)
                 return str(mult)
-            else:
+
+            elif(request.form["opc"] == "div"):
                 div = int(num1) // int(num2)
                 return str(div)
+
+            elif(request.form["opc"] == "pot"):
+                pot = int(num1) ** int(num2)
+                return str(pot)
+            
         else:
             return "Informe valor válido!"
 # @app.route("/<int:id>")
